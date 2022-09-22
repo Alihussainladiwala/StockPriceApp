@@ -3,7 +3,7 @@
 - type `json-server --watch db.json --port 3001` on the terminal to run the backend.
 
 # Backend
-- The data is fetched from a mock backend db.json. Add addtional rows by modifying the same.
+- The data is fetched from a mock backend [db.json](https://github.com/Alihussainladiwala/StockPriceApp/blob/main/stock-price/db.json). Add addtional rows by modifying the same.
 
 ## Hightlights:
 - Each component within the project has its own documentation
