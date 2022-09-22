@@ -17,4 +17,6 @@
 
 ## Screenshot
 
+![Alt text](https://github.com/Alihussainladiwala/StockPriceApp/blob/main/screenshots/stocksApp.PNG "App Screenshot")
+
 
