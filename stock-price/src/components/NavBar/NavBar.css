@@ -1,0 +1,10 @@
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7vh;
+    background-color: black
+}
+
+.navbar-title{
+    padding: 14px;
+}

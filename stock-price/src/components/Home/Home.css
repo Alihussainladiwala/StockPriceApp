@@ -1,0 +1,16 @@
+.home-grid{
+    padding: 10px;
+}
+
+.home-filter{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home-filter-element{
+    padding: 10px;
+}
+
+.app-card{
+    padding: 10px;
+}

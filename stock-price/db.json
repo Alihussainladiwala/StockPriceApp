@@ -1,0 +1,26 @@
+{
+  "stock-prices": [
+    {
+      "id": "AAPL",
+      "lastPrice": "133",
+      "tag": "forFriends",
+      "marketCap": 10
+    },
+    {
+      "id": "CSCO",
+      "lastPrice": "51",
+      "tag": "watching",
+      "marketCap": 10
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
