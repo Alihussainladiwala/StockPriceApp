@@ -11,9 +11,9 @@
 - The various components in this project are completely reusable
 - List of components:
 	+ [Card](https://github.com/Alihussainladiwala/StockPriceApp/blob/main/stock-price/src/components/Card/Card.md)
-	+ Grid
-	+ NavBar
-	+ Filter
+	+ [Grid](https://github.com/Alihussainladiwala/StockPriceApp/blob/main/stock-price/src/components/Grid/Grid.md)
+	+ [NavBar](https://github.com/Alihussainladiwala/StockPriceApp/blob/main/stock-price/src/components/NavBar/NavBar.md)
+	+ [Filter](https://github.com/Alihussainladiwala/StockPriceApp/blob/main/stock-price/src/components/Filter/Filter.md)
 
 ## Screenshot
 
