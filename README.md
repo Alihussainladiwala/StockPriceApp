@@ -10,7 +10,7 @@
 - I have used vanilla CSS throughout the project and have not used any framework.
 - The various components in this project are completely reusable
 - List of components:
-	+ Card
+	+ [Card](https://github.com/Alihussainladiwala/StockPriceApp/blob/main/stock-price/src/components/Card/Card.md)
 	+ Grid
 	+ NavBar
 	+ Filter
