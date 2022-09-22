@@ -14,10 +14,15 @@ function Card({ cardInfo }) {
 
   return (
     <div>
-      {cardInfo.length !== 0 && (
+      {cardInfoState.length !== 0 && (
         <div className="card">
-          <div>
-            <p className="card-title">Stock Information</p>
+          <div className="card-title-bar">
+            <div >
+              <p className="card-title">Stock Information</p>
+            </div>
+            <div>
+              <p className="card-close"  title="Close" onClick={()=>{setCardInfoState([])}}>X</p>
+            </div>
           </div>
           <div className="card-info">
             {cardInfoState.map((ele) => {

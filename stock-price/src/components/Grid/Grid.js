@@ -46,6 +46,7 @@ function Grid({ headers = [], rows = [], isButton = [], onButtonClick }) {
             <div>
               {ele[0] !== undefined && checkButtonType(ele[0]) === "default" && (
                 <div
+                  title="More Info"
                   className="grid-element-button"
                   key={ele[1]}
                   onClick={() => {
@@ -63,6 +64,7 @@ function Grid({ headers = [], rows = [], isButton = [], onButtonClick }) {
 
               {ele[0] !== undefined && checkButtonType(ele[0]) === "delete" && (
                 <div
+                  title="Delete"
                   className="grid-element-delete"
                   key={ele[1]}
                   onClick={() => {

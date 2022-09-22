@@ -27,4 +27,14 @@
     grid-template-rows: 30px;
 }
 
+.card-title-bar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-close{
+    cursor: pointer;
+    color: orange;
+}
+
 
