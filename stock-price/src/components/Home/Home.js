@@ -25,7 +25,6 @@ function Home() {
       let stockPrices = [...stockPricesState];
       let result = stockPrices.filter((ele) => ele.tag === key);
 
-      console.log(result);
       setStockPricesGrid(modifyFieldsForGrid(result));
     } else {
       setStockPricesGrid(modifyFieldsForGrid([...stockPricesState]));
@@ -59,7 +58,7 @@ function Home() {
       setStockInfo(result[0]);
     } else if (type == "delete") {
       deleteStocks(name.id).then(() => {
-        fetchStockPrices(name.id)
+        fetchStockPrices(name.id);
       });
     }
   };
@@ -75,16 +74,15 @@ function Home() {
     return gridArr;
   };
 
-  let fetchStockPrices = (key="") => {
+  let fetchStockPrices = (key = "") => {
     getStockPrices().then((stockPrices) => {
-      
       setStockPricesState(stockPrices.data);
       setStockPricesGrid(modifyFieldsForGrid(stockPrices.data));
-      setGridKey(key)
+      setGridKey(key);
     });
   };
   useEffect(() => {
-    fetchStockPrices()
+    fetchStockPrices();
   }, []);
 
   return (

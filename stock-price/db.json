@@ -4,23 +4,49 @@
       "id": "AAPL",
       "lastPrice": "133",
       "tag": "forFriends",
-      "marketCap": 10
+      "marketCap": 200
     },
     {
       "id": "CSCO",
       "lastPrice": "51",
       "tag": "watching",
-      "marketCap": 10
-    }
-  ],
-  "comments": [
+      "marketCap": 100
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": "AAPL_101",
+      "lastPrice": "13",
+      "tag": "forFriends",
+      "marketCap": 200
+    },
+    {
+      "id": "CSCO_101",
+      "lastPrice": "515",
+      "tag": "favourite",
+      "marketCap": 100
+    },
+    {
+      "id": "AAPL_102",
+      "lastPrice": "13",
+      "tag": "watching",
+      "marketCap": 2
+    },
+    {
+      "id": "CSCO_102",
+      "lastPrice": "5150",
+      "tag": "favourite",
+      "marketCap": 100000
+    },
+    {
+      "id": "CSCO_103",
+      "lastPrice": "150",
+      "tag": "favourite",
+      "marketCap": 100000
+    },
+    {
+      "id": "CSCO_104",
+      "lastPrice": "40",
+      "tag": "favourite",
+      "marketCap": 110
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

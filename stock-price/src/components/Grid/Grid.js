@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Grid.css";
 
-function Grid({ headers = [], rows = [], isButton=[] , onButtonClick}) {
+function Grid({ headers = [], rows = [], isButton = [], onButtonClick }) {
   const [gridElementsState, setGridElementsState] = useState([]);
 
   const gridStyle = (headerLength) => ({
@@ -11,22 +11,21 @@ function Grid({ headers = [], rows = [], isButton=[] , onButtonClick}) {
   });
 
   const checkButtonType = (key) => {
-
-    let result = isButton.filter((ele)=> {if(ele.name.toLowerCase() === key.toLowerCase()){
-        return ele.type
-    }})
-    if(result.length > 0){
-        return result[0].type
+    let result = isButton.filter((ele) => {
+      if (ele.name.toLowerCase() === key.toLowerCase()) {
+        return ele.type;
+      }
+    });
+    if (result.length > 0) {
+      return result[0].type;
     }
-
-  }
+  };
 
   useEffect(() => {
     let gridElements = [...gridElementsState];
     rows.map((row) => {
       Object.keys(row).forEach(function (key, index) {
         gridElements.push([key, row[key], row]);
-        
       });
     });
 
@@ -42,33 +41,39 @@ function Grid({ headers = [], rows = [], isButton=[] , onButtonClick}) {
           </div>
         ))}
 
-       
         {gridElementsState &&
-          gridElementsState.map((ele, index) => 
-          
-              (
-              <div>
-              {ele[0] !== undefined && checkButtonType(ele[0]) === "default" &&
-              <div className="grid-element-button" key={ele[1]} onClick={()=>{onButtonClick(ele[1], "default")}}>
-                
-                {ele[1]}
-                
-              </div>}
-              { 
-              ele[0] !== undefined && checkButtonType(ele[0]) === undefined &&
-              <div className="grid-element" key={ele[1]}>
-                {ele[1]}
-              </div>}
+          gridElementsState.map((ele, index) => (
+            <div>
+              {ele[0] !== undefined && checkButtonType(ele[0]) === "default" && (
+                <div
+                  className="grid-element-button"
+                  key={ele[1]}
+                  onClick={() => {
+                    onButtonClick(ele[1], "default");
+                  }}
+                >
+                  {ele[1]}
+                </div>
+              )}
+              {ele[0] !== undefined && checkButtonType(ele[0]) === undefined && (
+                <div className="grid-element" key={ele[1]}>
+                  {ele[1]}
+                </div>
+              )}
 
-              { 
-              ele[0] !== undefined && checkButtonType(ele[0]) === "delete" &&
-              <div className="grid-element-delete" key={ele[1]} onClick={()=>{onButtonClick(ele[2], "delete")}}>
-                X
-              </div>}
-              </div>
-              )
-            
-          )}
+              {ele[0] !== undefined && checkButtonType(ele[0]) === "delete" && (
+                <div
+                  className="grid-element-delete"
+                  key={ele[1]}
+                  onClick={() => {
+                    onButtonClick(ele[2], "delete");
+                  }}
+                >
+                  X
+                </div>
+              )}
+            </div>
+          ))}
       </div>
     </div>
   );
