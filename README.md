@@ -1,4 +1,4 @@
-# Steps to run the project:
+# Steps to run the project (Run these commands from the stock-price folder):
 - type `npm start` on the terminal to run the frontend
 - type `json-server --watch db.json --port 3001` on the terminal to run the backend.
 
