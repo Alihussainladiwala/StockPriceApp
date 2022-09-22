@@ -1,6 +1,6 @@
 # Steps to run the project:
 - type `npm start` on the terminal to run the frontend
-- type `json-server --watch db.json --port 3001` to run the backend.
+- type `json-server --watch db.json --port 3001` on the terminal to run the backend.
 
 # Backend
 - The data is fetched from a mock backend db.json. Add addtional rows by modifying the same.
