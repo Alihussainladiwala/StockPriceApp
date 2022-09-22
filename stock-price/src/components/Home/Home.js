@@ -10,7 +10,7 @@ import Card from "../Card/Card";
 function Home() {
   const title = "Stock Price App";
   const headers = ["Symbol", "Last Price", "Tag", "Actions"];
-  const list = ["forFriends", "watching", "favourite"];
+  //const list = ["forFriends", "watching", "favourite"];
   const isButton = [
     { name: "action", type: "delete" },
     { name: "id", type: "default" },
@@ -19,6 +19,7 @@ function Home() {
   const [stockPricesGrid, setStockPricesGrid] = useState([]);
   const [stockInfo, setStockInfo] = useState("");
   const [gridKey, setGridKey] = useState("");
+  const [filterList, setFilterList] = useState([]);
 
   const buttonClickFilter = (key) => {
     if (key !== "All") {
@@ -42,6 +43,14 @@ function Home() {
 
     return stockPrices;
   };
+
+  let createFilterList = (list) => {
+    let tempSet = new Set()
+    list.forEach((ele) =>{
+      tempSet.add(ele.tag)
+    })
+    setFilterList([...tempSet])
+  }
 
   let deleteStocks = async (id) => {
     try {
@@ -76,6 +85,7 @@ function Home() {
 
   let fetchStockPrices = (key = "") => {
     getStockPrices().then((stockPrices) => {
+      createFilterList(stockPrices.data)
       setStockPricesState(stockPrices.data);
       setStockPricesGrid(modifyFieldsForGrid(stockPrices.data));
       setGridKey(key);
@@ -90,7 +100,7 @@ function Home() {
       <NavBar title={title} />
       <div className="home-filter">
         <div className="home-filter-element">
-          <Filter list={list} onButtonClick={buttonClickFilter} />
+          <Filter list={filterList} onButtonClick={buttonClickFilter} />
         </div>
       </div>
       <div className="home-grid">
