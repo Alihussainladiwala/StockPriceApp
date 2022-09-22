@@ -7,5 +7,8 @@
 ## Output:
 - **onButtonClick**: returns the the button type that was clicked eg: delete, default and the row that was clicked on the grid.
 
+## Screenshot
+
+![Alt text](https://github.com/Alihussainladiwala/StockPriceApp/blob/main/screenshots/Grid.PNG "App Screenshot")
 
 
